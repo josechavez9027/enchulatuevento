@@ -250,22 +250,23 @@ body {
 }
 
 .carrusel-slides {
-	display: flex; /* pone las imágenes en fila */
-	scroll-snap-type: x mandatory; /* efecto snap */
-	-webkit-overflow-scrolling: touch; /* suaviza scroll en iOS */
-	scroll-behavior: smooth; /* scroll suave */
-	width: 100vw; /* ocupa todo el viewport */
-	height: 100vh; /* opcional: altura total del viewport */
+	height: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	-webkit-overflow-scrolling: touch;
+	touch-action: pan-x;
+	scroll-behavior: smooth;
+	scroll-snap-type: x mandatory;
 }
 
-/* Cada imagen como slide */
-.carrusel-slides img {
-	flex: 0 0 100vw; /* ancho = 100% del viewport */
-	height: 100%; /* altura igual al contenedor */
-	object-fit: cover; /* cubre todo el slide */
-	scroll-snap-align: start; /* pega al inicio al soltar el scroll */
-	pointer-events: auto; /* permite interacción */
-	user-select: none; /* evita seleccionar la imagen al arrastrar */
+.slide {
+	max-width: 100%;
+	min-height: 100%;
+	object-fit: contain;
+	user-select: none;
+	flex: 0 0 auto;
+	scroll-snap-align: start;
 }
 
 .carrusel-btn {
@@ -519,6 +520,15 @@ body {
 	width: 230px;
 	height: 100%;
 	overflow: hidden;
+	-webkit-overflow-scrolling: touch;
+	overflow-x: auto;
+	touch-action: pan-x;
+	scroll-behavior: smooth;
+	scrollbar-width: none;
+}
+
+.slidesContainer::-webkit-scrollbar {
+	display: none;
 }
 
 .carousel2nd {
@@ -530,13 +540,10 @@ body {
 	align-items: center;
 	margin-left: 4px;
 	transform: translateX(-250px);
-	transition: transform 0.5s ease-in-out;
-	-webkit-overflow-scrolling: touch;
-	overscroll-behavior-x: contain;
-	touch-action: pan-x;
 }
 
 .carousel-item {
+	flex: 0 0 1;
 	background-color: #ffffff;
 	border: 2px solid #c7a044;
 	border-radius: 10px;
@@ -545,6 +552,7 @@ body {
 	min-width: 220px;
 	height: 220px;
 	pointer-events: auto;
+	scroll-snap-align: start;
 	user-select: none;
 	-webkit-user-select: none;
 	-webkit-touch-callout: none;

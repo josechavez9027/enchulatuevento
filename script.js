@@ -20,7 +20,7 @@ const slidesbg3 = document.getElementById("slide3");
 const slidesbg4 = document.getElementById("slide4");
 const slidesbg5 = document.getElementById("slide5");
 
-const minRes = window.matchMedia("(min-width: 450px)");
+const minRes = window.matchMedia("(min-width: 1000px)");
 
 const minRes2 = window.matchMedia("(min-width: 860px)");
 

@@ -251,14 +251,17 @@ body {
 	-webkit-overflow-scrolling: touch;
 	touch-action: pan-x;
 	scroll-behavior: smooth;
-
 	scrollbar-width: none;
 }
 
 .main__carrucel::-webkit-scrollbar {
 	display: none;
 }
-
+.carrusel1_container {
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
 .carrusel-slides {
 	width: 100%;
 	height: 100%;
@@ -269,7 +272,7 @@ body {
 }
 
 .slide {
-	max-width: 100%;
+	width: 100%;
 	min-height: 100%;
 	object-fit: cover;
 	user-select: none;

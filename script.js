@@ -32,6 +32,7 @@ const slidesContainer2 = document.querySelector(".carousel2nd");
 const prevBtn2 = document.querySelector(".carrusel-btnprev");
 const nextBtn2 = document.querySelector(".carrusel-btnnext");
 const itemWidth = 250;
+const widthScreen = document.getElementById("slidesContainer");
 
 /*Variables del form */
 const form_invitados = document.getElementById("form_invitados");
@@ -176,10 +177,21 @@ function updateCarousel2() {
 
 function moveSlide2(direction) {
 	currentSlide2 += direction;
+	const width = widthScreen.clientWidth;
+	let width2 = 1;
+	if (width == 270) {
+		width2 = 1;
+	} else if (width == 470) {
+		width2 = 2;
+	} else if (width >= 720) {
+		width2 = 3;
+	}
+	console.log(width);
+	console.log(width2);
 	if (currentSlide2 < 0) {
 		currentSlide2 = 0;
-	} else if (currentSlide2 > totalSlides2 - 3) {
-		currentSlide2 = totalSlides2 - 3;
+	} else if (currentSlide2 > totalSlides2 - width2) {
+		currentSlide2 = totalSlides2 - width2;
 	}
 
 	updateCarousel2();

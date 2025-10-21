@@ -413,7 +413,6 @@ body {
 	align-items: flex-start;
 	width: 100%;
 	padding-bottom: 40px;
-	margin-top: 40px;
 	scroll-margin-top: 80px;
 }
 
@@ -428,6 +427,7 @@ body {
 	display: grid;
 	gap: 20px;
 	width: 100%;
+	margin-top: 40px;
 	grid-template-columns: repeat(2, 1fr);
 	grid-row: repeat(7, 1fr);
 	transition: all 0.3s ease;
@@ -928,15 +928,13 @@ input {
 		display: none;
 	}
 	/**    MOBILIARIO & COMESTIBLES***********************************************************************************************************************/
-	.services {
-		margin-top: 0;
-	}
 
 	.services__div {
 		grid-template-columns: repeat(2, 1fr);
 		grid-row: repeat(7, 1fr);
 		align-items: center;
 		transition: all 0.3s ease;
+		margin-top: 0;
 	}
 	.services__img {
 		display: block;

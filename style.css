@@ -533,6 +533,8 @@ body {
 	scroll-behavior: smooth;
 	scrollbar-width: none;
 	scroll-snap-type: x mandatory;
+	overscroll-behavior-x: contain;
+	position: relative;
 }
 
 .slidesContainer::-webkit-scrollbar {
@@ -547,20 +549,21 @@ body {
 	flex-wrap: nowrap;
 	align-items: center;
 	margin-left: 4px;
-	transform: translateX(-250px);
+	/* transform: translateX(-250px); */
 }
 
 .carousel-item {
-	flex: 0 0 1;
+	flex: 0 0 auto;
 	background-color: #ffffff;
 	border: 2px solid #c7a044;
 	border-radius: 10px;
 	padding: 10px;
 	position: relative;
-	min-width: 220px;
+	width: 220px;
 	height: 220px;
 	pointer-events: auto;
 	scroll-snap-align: start;
+	scroll-snap-stop: always;
 	user-select: none;
 	-webkit-user-select: none;
 	-webkit-touch-callout: none;

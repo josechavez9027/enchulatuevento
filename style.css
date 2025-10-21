@@ -251,7 +251,6 @@ body {
 
 .carrusel-slides {
 	display: flex; /* pone las imágenes en fila */
-	overflow-x: auto; /* scroll horizontal */
 	scroll-snap-type: x mandatory; /* efecto snap */
 	-webkit-overflow-scrolling: touch; /* suaviza scroll en iOS */
 	scroll-behavior: smooth; /* scroll suave */

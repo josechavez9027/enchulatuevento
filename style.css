@@ -247,26 +247,39 @@ body {
 	position: relative;
 	background-color: #444444;
 	overflow: hidden;
-}
-
-.carrusel-slides {
-	height: 100%;
-	display: flex;
-	flex-wrap: nowrap;
-	align-items: center;
+	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
 	touch-action: pan-x;
 	scroll-behavior: smooth;
-	scroll-snap-type: x mandatory;
+
+	scrollbar-width: none;
+}
+
+.main__carrucel::-webkit-scrollbar {
+	display: none;
+}
+
+.carrusel-slides {
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
 }
 
 .slide {
 	max-width: 100%;
 	min-height: 100%;
-	object-fit: contain;
+	object-fit: cover;
 	user-select: none;
 	flex: 0 0 auto;
 	scroll-snap-align: start;
+	pointer-events: auto;
+	scroll-snap-align: start;
+	user-select: none;
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
 }
 
 .carrusel-btn {

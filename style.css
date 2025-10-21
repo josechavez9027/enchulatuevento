@@ -247,16 +247,8 @@ body {
 	position: relative;
 	background-color: #444444;
 	overflow: hidden;
-	overflow-x: auto;
-	-webkit-overflow-scrolling: touch;
-	touch-action: pan-x;
-	scroll-behavior: smooth;
-	scrollbar-width: none;
 }
 
-.main__carrucel::-webkit-scrollbar {
-	display: none;
-}
 .carrusel1_container {
 	display: flex;
 	justify-content: center;
@@ -277,12 +269,6 @@ body {
 	object-fit: cover;
 	user-select: none;
 	flex: 0 0 auto;
-	scroll-snap-align: start;
-	pointer-events: auto;
-	scroll-snap-align: start;
-	user-select: none;
-	-webkit-user-select: none;
-	-webkit-touch-callout: none;
 }
 
 .carrusel-btn {
@@ -327,6 +313,11 @@ body {
 	color: white;
 	border-radius: 2em;
 	cursor: pointer;
+	opacity: 0.6;
+}
+
+.bi-circle-fill {
+	opacity: 1;
 }
 
 .carrusel-btn:hover {
@@ -541,6 +532,7 @@ body {
 	touch-action: pan-x;
 	scroll-behavior: smooth;
 	scrollbar-width: none;
+	scroll-snap-type: x mandatory;
 }
 
 .slidesContainer::-webkit-scrollbar {
@@ -1135,14 +1127,14 @@ input {
 		height: 10%;
 	} */
 	.carrusel-btn {
-		width: 20px;
+		width: 10px;
 	}
 }
 
 @media (max-width: 530px) {
-	/* .header__menu2 li {
-		height: 50%;
-	} */
+	.carrusel-btn {
+		width: 20px;
+	}
 }
 
 @media (min-width: 1150px) and (max-width: 1500px) {

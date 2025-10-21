@@ -274,12 +274,12 @@ body {
 .carrusel-btn {
 	position: absolute;
 	margin: auto;
-	padding: 0 40px;
+	padding: 0 10px;
 	cursor: pointer;
 	height: 100%;
 	width: 40px;
 	transition: all 0.3s ease;
-	z-index: 100;
+	z-index: 1;
 }
 
 .carrusel-btn img {
@@ -910,6 +910,10 @@ input {
 	.main__carrucel {
 		max-height: calc(100vh - 80px);
 	}
+	.carrusel-btn {
+		width: 4vw;
+		padding: 0 40px;
+	}
 
 	/**    INFORMATION ********************************************************************************************************************************/
 	.information {
@@ -1133,7 +1137,7 @@ input {
 
 @media (max-width: 530px) {
 	.carrusel-btn {
-		width: 20px;
+		width: 4vw;
 	}
 }
 
@@ -1154,6 +1158,9 @@ input {
 	}
 	.carousel2nd {
 		margin-left: 0;
+	}
+	.carrusel-btn {
+		padding: 0 10px;
 	}
 }
 

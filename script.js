@@ -259,7 +259,7 @@ function enviarWhatsApp(mensaje) {
 	const numeroWhatsApp = "523320272875";
 	const mensajeCodificado = encodeURIComponent(mensaje);
 	console.log(mensajeCodificado);
-	const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`;
+	const urlWhatsApp = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${mensajeCodificado}`;
 
 	window.open(urlWhatsApp, "_blank");
 }
@@ -270,6 +270,6 @@ header__button.addEventListener("click", () => {
 	const numeroWhatsApp = "523320272875";
 	const mensajeCodificado =
 		"¡Hola! estoy interesado en una cotización, ¿Me podrías dar más información por favor?";
-	const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`;
+	const urlWhatsApp = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${mensajeCodificado}`;
 	window.open(urlWhatsApp, "_blank");
 });
